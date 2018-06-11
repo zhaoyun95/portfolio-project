@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <link rel="icon" href="../../../../favicon.ico">
 
-  <title>Album example for Bootstrap</title>
+  <title>Blog Detail</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -35,39 +35,18 @@
   </header>
 
   <main role="main">
+    <div class="container">
 
-    <section class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Hi, I am James.</h1>
-        <p class="lead text-muted">Hey, my name is James and I love Django programming</p>
-        <p>
-          <a href="mailto:yiteng@yahoo.com" class="btn btn-primary my-2">Email Me</a>
-        </p>
-        <img src="{% static '20170116_102710-crop.jpg' %}" height="300" alt="">
-      </div>
-    </section>
+      <h3 class="text-center">{{blog.title}}</h3>
+      <p class="text-center">{{blog.pub_date}}</p>
+      <!-- <img class="img-fluid" src={{blog.image.url}} height=150 /> -->
+      <img class="img-fluid" src={{blog.image.url}} />
+      <p>{{blog.body}}</p>
+      <br>
+      <br>
+      <hr>
 
-    <div class="album py-5 bg-light">
-      <div class="container">
-
-        <div class="row">
-
-          {% for job in jobs.all %}
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <img class="card-img-top" src={{job.image.url}}>
-              <div class="card-body">
-                <p class="card-text">{{job.summary}}</p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-
-        </div>
-
-      </div>
     </div>
-
   </main>
 
   <footer class="text-muted">
